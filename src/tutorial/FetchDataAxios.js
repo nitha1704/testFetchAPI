@@ -6,7 +6,7 @@ function FetchDataAxios() {
 
   const usersData = async () => {
     const getUsersData = await axios
-      .get("http://localhost:3000/zpuck.json")
+      .get("https://test-fetch-1704.netlify.app/zpuck.json")
       .then((res) => res.data)
       .catch((err) => console.log(err));
 
@@ -15,11 +15,13 @@ function FetchDataAxios() {
   };
 
   const addNewUser = async()=>{
-    const newUser = await axios.post("http://localhost:3000/zpuck.json", {
-      id: 4,
-      name: "Anastasia",
-      age: 15,
-    }).then(res=>console.log(res))
+    const newUser = await axios
+      .post("https://test-fetch-1704.netlify.app/zpuck.json", {
+        id: 4,
+        name: "Anastasia",
+        age: 15,
+      })
+      .then((res) => console.log(res));
   }
 
   useEffect(() => {
