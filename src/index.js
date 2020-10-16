@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 import "./style.css";
 
 // Component
-import Setup from "./tutorial/UseEffectFetchAPI";
+import Setup from "./tutorial/FetchDataAxios";
 
 
 
