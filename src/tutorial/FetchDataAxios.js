@@ -21,7 +21,10 @@ function FetchDataAxios() {
         name: "Anastasia",
         age: 15,
       })
-      .then((res) => console.log(res));
+      .then((res) => {
+        console.log(res);
+        usersData();
+      });
   }
 
   useEffect(() => {

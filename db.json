@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Maxwell",
+      "age": 25
+    },
+    {
+      "id": 2,
+      "name": "Johns",
+      "age": 18
+    },
+    {
+      "id": 3,
+      "name": "Sarah",
+      "age": 30
+    },
+    {
+      "id": "4",
+      "name": "Olberic",
+      "age": "35"
+    },
+    {
+      "id": "5",
+      "name": "Primrose",
+      "age": "22"
+    },
+    {
+      "id": "78",
+      "name": "Alfyn",
+      "age": "21"
+    },
+    {
+      "id": "6",
+      "name": "Violet",
+      "age": "33"
+    },
+    {
+      "id": "7",
+      "name": "Therion",
+      "age": "19"
+    }
+  ],
+  "demons": [
+    {
+      "id": 1,
+      "name": "Kokushibou"
+    },
+    {
+      "id": 2,
+      "name": "Douma"
+    },
+    {
+      "id": 3,
+      "name": "Akaza"
+    }
+  ]
+}
