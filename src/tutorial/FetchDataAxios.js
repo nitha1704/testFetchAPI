@@ -17,15 +17,13 @@ function FetchDataAxios() {
   };
 
   const addNewUser = async()=>{
-    const newUser = await axios
-      .post(
-        "https://express-netlify-lambda1704.netlify.app/.netlify/functions/api/",
-        {
-          id: 4,
-          name: "Anastasia",
-          lastname: "Mortimer",
-        }
-      )
+    const people = {
+      id: 4,
+      name: "Anastasia",
+      lastname: "Mortimer"
+    };
+
+    const newUser = await axios.post("https://express-netlify-lambda1704.netlify.app/.netlify/functions/api/",people)
       .then((res) => {
         console.log(res);
         usersData();
