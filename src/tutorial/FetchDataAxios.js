@@ -6,7 +6,9 @@ function FetchDataAxios() {
 
   const usersData = async () => {
     const getUsersData = await axios
-      .get("https://test-fetch-1704.netlify.app/zpuck.json")
+      .get(
+        "https://express-netlify-lambda1704.netlify.app/.netlify/functions/api/"
+      )
       .then((res) => res.data)
       .catch((err) => console.log(err));
 
@@ -16,11 +18,14 @@ function FetchDataAxios() {
 
   const addNewUser = async()=>{
     const newUser = await axios
-      .post("https://test-fetch-1704.netlify.app/zpuck.json", {
-        id: 4,
-        name: "Anastasia",
-        age: 15,
-      })
+      .post(
+        "https://express-netlify-lambda1704.netlify.app/.netlify/functions/api/",
+        {
+          id: 4,
+          name: "Anastasia",
+          lastname: "Mortimer",
+        }
+      )
       .then((res) => {
         console.log(res);
         usersData();
@@ -33,13 +38,19 @@ function FetchDataAxios() {
 
 console.log(users);
 
+  
+
   return (
     <div>
       <h1>Fetch Data Axios</h1>
       <button onClick={()=>addNewUser()}>Add New User</button>
-      {users.map((user) => (
+
+      {users.length === 0 && <h2>Now loading....</h2>}
+
+      {users.length > 0 && users.map((user) => (
         <h2 key={user.id} style={{color:'red'}}>{user.name}</h2>
       ))}
+
     </div>
   );
 }
